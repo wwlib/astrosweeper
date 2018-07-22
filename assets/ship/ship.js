@@ -363,18 +363,22 @@
             .addAction(function () {
                 /* gotoAndPlay("idle");
                  */
+                 this.stop();
             }, 9)
             .addAction(function () {
                 /* owner.doneShooting();
                 gotoAndPlay("idle");*/
+                this.stop();
             }, 16)
             .addAction(function () {
                 /* owner.doneShooting();
                 gotoAndPlay("idle");*/
+                this.stop();
             }, 21)
             .addAction(function () {
                 /* owner.die();
                 stop();*/
+                this.stop();
             }, 59);
     });
 

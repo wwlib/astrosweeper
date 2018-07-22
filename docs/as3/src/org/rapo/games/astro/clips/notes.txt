@@ -1,0 +1,5 @@
+Clips are implemented as subclasses of mcBase so they can have an owner property
+
+Game objects are not implemented as MovieClips, rather they have a MovieClip (mcBase).  If the clips, themselves, were associated with game objects, then every instance of a clip would include all of the code required for a game object.  Even if the clip is used purely for decoration. i.e. a number of small ship icons used to indicate remaining lives.
+
+Clips that have any important structure cannot simply implement MovieCip
