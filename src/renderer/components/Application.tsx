@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactBootstrap from "react-bootstrap";
 
-export interface ApplicationProps { shipInstance: any }
+export interface ApplicationProps { shipMc: any }
 export interface ApplicationState { }
 
 export default class Application extends React.Component < ApplicationProps, ApplicationState > {
@@ -18,20 +18,20 @@ export default class Application extends React.Component < ApplicationProps, App
         // console.log(`onButtonClicked: ${action}`);
         switch (action) {
             case 'idle':
-                this.props.shipInstance.ship.ship_anim.gotoAndStop('idle');
-                this.props.shipInstance.ship.ship_shield.visible = false;
+                this.props.shipMc.ship_anim.gotoAndStop('idle');
+                this.props.shipMc.ship_shield.visible = false;
                 break;
             case 'shield':
-                this.props.shipInstance.ship.ship_shield.visible = true;
+                this.props.shipMc.ship_shield.visible = true;
                 break;
             case 'shoot':
-                this.props.shipInstance.ship.ship_anim.gotoAndPlay('shoot');
+                this.props.shipMc.ship_anim.gotoAndPlay('shoot');
                 break;
             case 'hit':
-                this.props.shipInstance.ship.ship_anim.gotoAndPlay('hit');
+                this.props.shipMc.ship_anim.gotoAndPlay('hit');
                 break;
             case 'over':
-                this.props.shipInstance.ship.ship_anim.gotoAndPlay('over');
+                this.props.shipMc.ship_anim.gotoAndPlay('over');
                 break;
         }
     }
