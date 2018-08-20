@@ -54,10 +54,12 @@ export default class PowerupManager {
 	}
 
 	static deactivatePowerup():void {
-		PowerupManager.revoke(PowerupManager.activePowerup.type);
-		PowerupManager.activePowerup = null;
-		PowerupManager.mc.powerUpList.gotoAndPlay("none");
-		PowerupManager.mc.gotoAndStop(1);
+		if (PowerupManager.activePowerup) {
+			PowerupManager.revoke(PowerupManager.activePowerup.type);
+			PowerupManager.activePowerup = null;
+			PowerupManager.mc.powerUpList.gotoAndPlay("none");
+			PowerupManager.mc.gotoAndStop(1);
+		}
 	}
 
 	static invoke(type: string):void {
